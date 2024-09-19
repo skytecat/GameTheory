@@ -90,25 +90,7 @@ class Detective(Player):
             solution = 'cheat'
         return solution
 
-class Strange(Player):
-    def decide(self, history):
-        if(len(history)>2 and 'cheat' in history):
-            solution = 'cooperate'
-        else:
-            solution = 'cheat'
-        return solution
-
-
 def main():
-    # // with my player //
-
-    # players = [
-    #     Copycat("Copycat"),
-    #     Cooperator("Cooperator"),
-    #     Detective("Detective"),
-    #     Strange("Strange")
-    # ]
-
     players = [
         Copycat("Copycat"),
         Cheater("Cheater"),
@@ -123,5 +105,6 @@ def main():
         player1, player2 = pair[0], pair[1]
         top3 = game.play(player1, player2)
     top3()
+    
 if __name__ == "__main__":
     main()
