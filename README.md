@@ -1,7 +1,7 @@
 # GameTheory
 ## Prisoner's Dilemma
 
-ZAX told about the simple game with candy, where there is a machine that
+This project simulates the simple game with candy, where there is a machine that
 controls the supply of candy for two groups of people based on whether 
 one or both of two operators put one in it:
 
@@ -19,7 +19,7 @@ will get anything.
 
 ## Behavior types
 
-Also, ZAX mentioned five models of behavior that it used to run experiments:
+This project uses 5 models of behavior:
 
 | Behavior type | Player Actions                                                                                                                                                                                         |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -33,7 +33,7 @@ Also, ZAX mentioned five models of behavior that it used to run experiments:
 
 ## Project Requirments
 
-To finish the experiment with ZAX, you need to model a system with seven
+Need to model a system with seven
 classes - `Game`, `Player` and five behavior types (subclassed from `Player`).
 
 Here, `registry` is used to keep track of the current number of candy
@@ -45,17 +45,8 @@ of a specified number of matches between players of a given behavior.
 Method `top3()` should print current top three player's behaviors
 along with their current score.
 
-By default, your code when run should simulate 10 matches (one call of
+By default, code when run should simulate 10 matches (one call of
 `play()`) between every pair of two players with *different* behavior
 types (total 10 rounds by 10 matches each, no matches between two
 copies of the same behavior) and print top three winners after the 
 whole game.
-
-You are strongly encouraged to experiment around with different
-behaviors and writing your own behavior class (this is graded as a
-bonus). You can get even more bonus points if an instance of your 
-class performs better in the same "contest between each pair of
-players" check that at least three of five provided behaviors.
-
-Don't forget that the only thing a player can do on each turn is
-either cooperate or cheat, based on a history of a current game.
