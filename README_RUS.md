@@ -29,27 +29,26 @@
 | Cooperator    | Всегда сотрудничает                                                                                                                                                                                      |
 | Copycat       | Начинает с сотрудничества, но потом просто повторяет то, что делает другой игрок                                                                                                                      |
 | Grudger       | Начинает всегда с сотрудничества, но превращается в Cheater навсегда, как только второй игрок обманет хоть раз                                                                                                         |
-| Detective     | First four times goes with [Cooperate, Cheat, Cooperate, Cooperate],  and if during these four turns another guy cheats even once -  switches into a Copycat. Otherwise, switches into Cheater himself |
+| Detective     | Первые 4 хода выглядят следующим образом: [сотрудничает, обманывает, сотрудничает, сотрудничает], и если в течение этих 4 ходов другой игрок обманывает хоть раз - превращается в Copycat, иначе превращается в Cheater  |
 
 -----
 
-## Project Requirments
+## Требования к проекту
 
-Need to model a system with seven
-classes - `Game`, `Player` and five behavior types (subclassed from `Player`).
+Необходимо смоделировать систему с 7
+классами - `Game`, `Player` и 5 типами поведения (подклассами от `Player`).
 
-Here, `registry` is used to keep track of the current number of candy
-during the game, while `player1` and `player2` are instances of 
-subclasses of `Player` (each being one of 5 behavior types). Calling 
-`play()` method of a `Game` instance should perform a simulation
-of a specified number of matches between players of a given behavior.
+`registry` используется для отслеживания текущего количества конфет
+во время игры, `player1` и `player2` являются экземплярами
+подклассов `Player` (каждый из которых представляет собой один из 5 типов поведения).
+Метод `play()` экземпляра `Game` должен выполнять моделирование
+определенного количества матчей между игроками с заданным поведением.
 
-Method `top3()` should print current top three player's behaviors
-along with their current score.
+Метод `top3()` должен вывести трех лучших игроков
+вместе с их счетом.
 
-By default, code when run should simulate 10 matches (one call of
-`play()`) between every pair of two players with *different* behavior
-types (total 10 rounds by 10 matches each, no matches between two
-copies of the same behavior) and print top three winners after the 
-whole game.
-
+По умолчанию код при запуске должен имитировать 10 матчей (один вызов
+функции "play()") между каждой парой игроков с *разными*
+типами поведения (всего 10 раундов по 10 матчей в каждом, совпадений между двумя
+экземплярами одного и того же поведения нет) и выводить тройку победителей после
+всей игры.
