@@ -1,6 +1,8 @@
 # GameTheory
 ## Prisoner's Dilemma
 
+[Описание на русском](./README_RUS.md)
+
 This project simulates the simple game with candy, where there is a machine that
 controls the supply of candy for two groups of people based on whether 
 one or both of two operators put one in it:
